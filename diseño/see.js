@@ -10,3 +10,4 @@ btnseeLogin.addEventListener('click', () => {
     loginsee.removeAttribute('class')
     registersee.setAttribute('class', 'hidden');
 });
+

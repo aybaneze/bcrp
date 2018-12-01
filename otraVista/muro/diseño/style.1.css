@@ -125,13 +125,13 @@ textarea {
     min-height: 50px;
     max-height: 50px;
 }
-
 #map{
     height:25em;
 }
 h1{
     text-align: center;
 }
+
 @media(max-width:574px) {
     .hidden2 {
         display: block;
