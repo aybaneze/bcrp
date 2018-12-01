@@ -87,6 +87,10 @@ h1 {
     height: 50px;
 }
 
+.ancho{
+    width: 75%;
+
+}
 @media(max-width:574px) {
     .hidden2 {
         display: block;
