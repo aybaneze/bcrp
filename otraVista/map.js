@@ -63,3 +63,10 @@ if (navigator.geolocation) {
 
     })
 }
+const btn = document.getElementsByClassName("check");
+for (let index = 0; index < btn.length; index++) {
+    btn[index].addEventListener('click', () => {
+        console.log(btn[index].value);
+        
+    })
+}

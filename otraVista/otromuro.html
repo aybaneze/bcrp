@@ -9,7 +9,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
     crossorigin="anonymous">
-  <link rel="stylesheet" href='./muro/diseño/style.1.css'>
+  <link rel="stylesheet" href='style.1.css'>
 
   <title>KS/.</title>
 </head>
@@ -47,17 +47,74 @@
       </div>
     </div>
   </header>
-  <section id='seeMap' class="container">
-    <div class="row mt-3">
-      <div class="col-md-12">
-        <div id="map"></div>
+  <section id='seeMap' class="hidden">
+    <div class="container-fluid slider ">
+      <div class="row pt-3">
+        <div class="col-md-12">
+          <div id="map"></div>
+        </div>
+        <div class="col-md-12 text-center mt-2  ">
+          <h2 class="fas fa-undo-alt"></h2>
+        </div>
       </div>
-      <div class="col-md-12">
-
-      </div>
-
+    </div>
   </section>
+  <section id="seeN°serie" class=" ">
+    <div class=" container-fluid  slider text-dark d-flex align-items-center justify-content-center ">
+      <div class="row  pt-3">
+        <div class="col-md-12 text-center ">
+          <div class="row mt-3">
+            <div class="col-md-12">
+              <h2>Selecciona el valor del billete</h2>
+            </div>
+            <div class="col-md-12 mt-3">
+              <div class="row">
+                <div class="col-md-4 col-6 ">
+                  <input type="button" class="check" value="S/.10">
+                </div>
+                <div class="col-md-4 col-6">
+                  <input type="button" class="check" value="s/.20">
+                </div>
+                <div class="col-md-4 col-6 mt-2">
+                  <input type="button" class="check" value="S/.50">
+                </div>
+                <div class="col-md-6 col-6 mt-2">
+                  <input type="button" class="check" value="S/.100">
+                </div>
+                <div class="col-md-6 col-12 mt-2">
+                  <input type="button" class="check" value="S/.200">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-4 img"></div>
+                <div class="col-md-4 img"></div>
+                <div class="col-md-4 img"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 text-center mt-5  ">
+          <div class="row mt-3">
+            <div class="col-md-12">
+              <h2>Ingresa N° de serie</h2>
+            </div>
+            <div class="col-md-12">
+              <input type="text" id="Nserie" class="Nserie">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 text-center mt-4">
+          <h2 class="fas fa-arrow-right"></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 </body>
 <script src="map.js"></script>
+<script src="./muro/diseño/seepost.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlaztrxAnFM8iv9g1FND0P-mSzsk_YT-I">
 </script>
