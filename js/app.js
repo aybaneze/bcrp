@@ -14,11 +14,3 @@ const btnRegister = document.getElementById("register-user");
 //botones de iniciar secion con google y anonimo
 const btnGoogle = document.getElementById("google-SignIn");
 const anonimus = document.getElementById("anonimo");
-// ventana usuario
-const username=document.getElementById('username');
-// botones de post
-const post = document.getElementById('post');
-const postL = document.getElementById("post-list");
-const postP = document.getElementById("post-list-public");
-const postWord=document.getElementById("post-word");
-const btnSave =document.getElementById('publicar');
