@@ -68,7 +68,7 @@
               <h2>Selecciona el valor del billete</h2>
             </div>
             <div class="col-md-12 mt-3">
-              <div class="row">
+              <div class="row  ">
                 <div class="col-md-4 col-6 ">
                   <input type="button" class="check" value="S/10">
                 </div>
@@ -86,18 +86,30 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12 mt-3 ">
+            <div class="col-md-12 mt-3  ">
               <div id="typeMoney" class="hidden">
                 <div class="row ancho d-flex align-items-center justify-content-center">
-                  <div class="col-md-4"><img id="firsImage" src="" class="img-fluid img" alt=""></div>
-                  <div class="col-md-4"><img id="secondImage" src="" class="img-fluid img" alt=""></div>
-                  <div class="col-md-4"><img id="thirdImage" src="" class="img-fluid img" alt=""></div>
+                  <div class="col-md-12">
+                    <h4>Seleccione tipo de serie</h4>
+                  </div>
+                  <div class="col-md-4">
+                    <h5>Tipo A</h5>
+                    <img id="firsImage" src="" class="img-fluid img" alt="">
+                  </div>
+                  <div class="col-md-4">
+                    <h5>Tipo B</h5>
+                    <img id="secondImage" src="" class="img-fluid img" alt="">
+                  </div>
+                  <div class="col-md-4">
+                    <h5>Tipo C</h5>
+                    <img id="thirdImage" src="" class="img-fluid img" alt="">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-12 text-center mt-2  ">
+        <div id="inputTye" class=" hidden ">
           <div class="row mt-3">
             <div class="col-md-12">
               <h2>Ingresa N° de serie</h2>
@@ -105,11 +117,27 @@
             <div class="col-md-12 d-flex align-items-center justify-content-center">
               <div class="input-group mb-3   ancho">
                 <div class="input-group-prepend">
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  <input id="firstLetter" type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1">
                 </div>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input id="halfLetter" type="number" class="form-control" placeholder="Username" aria-label="Username"
+                  aria-describedby="basic-addon1">
                 <div class="input-group-prepend">
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  <input id="lastLetter" type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center align-items-center">
+              <div class="row ancho ">
+                <div class="col-md-4">
+                  <input id="A" type="button" class="btnVer " value="Validar tipo A">
+                </div>
+                <div class="col-md-4">
+                  <input id="B" type="button" class="btnVer" value="Validar tipo B">
+                </div>
+                <div class="col-md-4">
+                  <input id="C" type="button" class="btnVer" value="Validar tipo C">
                 </div>
               </div>
             </div>

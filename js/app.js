@@ -17,8 +17,15 @@ const anonimus = document.getElementById("anonimo");
 //btn de valores de billetes
 const btnCheck = document.getElementsByClassName("check");
 const imgMoney = document.getElementsByClassName("img");
-
 const typeMoney= document.getElementById('typeMoney');
 const firsImage= document.getElementById('firsImage');
 const secondImage= document.getElementById('secondImage');
 const thirdImage= document.getElementById('thirdImage');
+//btn tipo A B C
+const typebtn= document.getElementById('typebtn');
+const inputTye= document.getElementById('inputTye');
+//input text tipo a b c
+const btnVer=document.getElementsByClassName('btnVer');
+const firstLetter= document.getElementById('firstLetter');
+const halfLetter= document.getElementById('halfLetter');
+const lastLetter= document.getElementById('lastLetter');
