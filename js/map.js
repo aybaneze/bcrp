@@ -52,14 +52,3 @@ const dibujarMapa = (obj, locationsInfo) => {
     })
 }
 window.addEventListener('load', getLocations)
-// obtener coodenadas del usuario
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition((data) => {
-        let currentPosition = {
-            lat: data.coords.latitude,
-            lng: data.coords.longitude
-        }
-        console.log(currentPosition);
-
-    })
-}
