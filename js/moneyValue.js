@@ -1,5 +1,5 @@
 const arraytwenty = ['./imgMoney/A.jpg', './imgMoney/B.jpg', './imgMoney/C.jpeg'];
-const arrayoneHundred = ['./imgMoney/A.jpeg', './imgMoney/B.jpg', './imgMoney/C.jpg'];
+const arrayoneHundred = ['./imgMoney/100A.png', './imgMoney/100B.png', './imgMoney/100C.png'];
 
 const moneyValue = (uid) => {
   console.log(uid);
@@ -62,7 +62,37 @@ const asigValue = (number, uid) => {
   } else if (number === 100) {
     typeMoney.removeAttribute('class');
     typeMoney.setAttribute('class', ' d-flex align-items-center justify-content-center');
-    money = number;
+    firsImage.src = arrayoneHundred[0];
+    secondImage.src = arrayoneHundred[1];
+    thirdImage.src = arrayoneHundred[2];
+    for (let index = 0; index < imgMoney.length; index++) {
+      imgMoney[index].addEventListener('click', () => {
+        const typeMoney = imgMoney[index].id;
+        if (typeMoney === 'firsImage') {
+          console.log(11);
+          money = {
+            value: number,
+            type: 'A'
+          }
+          searchMoneyValue(money, number, uid);
+        } else if (typeMoney === 'secondImage') {
+          console.log(12);
+
+          money = {
+            value: number,
+            type: 'B'
+          }
+          searchMoneyValue(money, number, uid);
+        } else if (typeMoney === 'thirdImage') {
+          console.log(13);
+          money = {
+            value: number,
+            type: 'C'
+          }
+          searchMoneyValue(money, number, uid);
+        }
+      })
+    }
   } else if (number === 200) {
     typeMoney.setAttribute('class', 'hidden');
     inputTye.setAttribute('class', 'hidden');
@@ -125,13 +155,18 @@ const see = (type, number, firts, half, last, uid) => {
       let serieEnd = last.toUpperCase();
       if (serieInit === 'A' && 64 < serieEnd < 91) {
         const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
 
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'B' && serieEnd === 'A' && valor <= 5000000) {
         const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else {
         const nSerie = false;
+        alert("TU BILLETE NO SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
 
       }
@@ -141,18 +176,24 @@ const see = (type, number, firts, half, last, uid) => {
       let serieEnd = last.toUpperCase();
       if (serieInit === 'B' && 64 < serieEnd < 91) {
         const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'C' && 65 <= serieEnd.charCodeAt() && serieEnd.charCodeAt() <= 67) {
         console.log(serieInit);
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         const nSerie = true;
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
         console.log(65 <= serieEnd.charCodeAt() <= 67)
       } else if (serieInit === 'C' && serieEnd === 'D' && valor <= 5000000) {
-        console.log("c")
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
         const nSerie = true;
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else {
         const nSerie = false;
+        alert("TU BILLETE NO SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
 
       }
@@ -164,22 +205,98 @@ const see = (type, number, firts, half, last, uid) => {
 
       if (serieInit === 'C' && serieEnd === 'D' && valor >= 5000001) {
         const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'C' && 68 < serieEnd.charCodeAt() && serieEnd.charCodeAt() < 91) {
         const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'D' && 65 === serieEnd.charCodeAt()) {
         const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'D' && serieEnd.charCodeAt() === 66 && valor <= 5000000) {
         const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else {
         const nSerie = false;
+        alert("TU BILLETE NO SE ENCUENTRA REGISTRADO EN EL BCRP");
+
         writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       }
     }
   } else if (number === 100) {
+    if (type === 'A') {
+      let valor = half;
+      let serieInit = firts.toUpperCase();
+      let serieEnd = last.toUpperCase();
+      if (serieInit === 'A' && 64 < serieEnd.charCodeAt() && serieEnd.charCodeAt() < 83 && valor <=
+        9999999) {
+        const nSerie = true;
 
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
+      } else {
+        const nSerie = false;
+        alert("TU BILLETE NO SE ENCUENTRA REGISTRADO EN EL BCRP");
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
+
+      }
+
+    } else if (type === 'B') {
+      let valor = half;
+      let serieInit = firts.toUpperCase();
+      let serieEnd = last.toUpperCase();
+      if (serieInit === 'A' && 83 <= serieEnd.charCodeAt() && serieEnd.charCodeAt() < 91 && valor > 0) {
+        const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+      } else if (serieInit === 'B' && 65 <= serieEnd.charCodeAt() && serieEnd.charCodeAt() <= 90) {
+        const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
+      } else if (serieInit === 'C' && 65 <= serieEnd.charCodeAt() && serieEnd.charCodeAt() <= 67 && valor <=
+        9999999) {
+        const nSerie = true;
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
+
+      } else {
+        const nSerie = false;
+        alert("TU BILLETE NO SE ENCUENTRA REGISTRADO EN EL BCRP");
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
+
+      }
+
+    } else if (type === 'C') {
+      let valor = half;
+      let serieInit = firts.toUpperCase();
+      let serieEnd = last.toUpperCase();
+      if (serieInit === 'C' && 68 <= serieEnd.charCodeAt() && serieEnd.charCodeAt() < 91 && valor > 0) {
+        const nSerie = true;
+
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
+
+      } else if (serieInit === 'D' && 65 <= serieEnd.charCodeAt() && serieEnd.charCodeAt() <= 82 && valor <=
+        9999999) {
+          const nSerie = true;
+
+        alert("TU BILLETE SE ENCUENTRA REGISTRADO EN EL BCRP");
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
+
+      } else {
+        const nSerie = false;
+
+        alert("TU BILLETE NO SE ENCUENTRA REGISTRADO EN EL BCRP");
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
+
+      }
+
+    }
   }
 }

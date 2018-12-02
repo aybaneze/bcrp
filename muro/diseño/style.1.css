@@ -33,7 +33,12 @@
     color: white;
 
 }
-
+#firstLetter{
+    width: 70px;
+}
+#lastLetter{
+    width: 70px;
+}
 .fondo {
     background: white;
     background-size: cover;
@@ -41,6 +46,10 @@
     height: 100px;
     width: 100%;
     color: rgb(13, 148, 18);
+}
+.fondo img{
+    height: 100px;
+    width: 200px;
 }
 
 h3 i {
