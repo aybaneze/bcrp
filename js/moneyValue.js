@@ -1,4 +1,4 @@
-const arraytwenty = ['./imgMoney/A.jpeg', './imgMoney/B.jpg', './imgMoney/C.jpg'];
+const arraytwenty = ['./imgMoney/A.jpg', './imgMoney/B.jpg', './imgMoney/C.jpeg'];
 const arrayoneHundred = ['./imgMoney/A.jpeg', './imgMoney/B.jpg', './imgMoney/C.jpg'];
 
 const moneyValue = () => {
