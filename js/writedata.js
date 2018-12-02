@@ -1,4 +1,4 @@
-const writeubication = (uid, numero,estado) => {
+const writeubication = (uid, numero,type,estado) => {
     // Get a key for a new Post.
     const newPostKey = firebase.database().ref().child('posts').push().key;
     // obtener coodenadas del usuario
@@ -13,6 +13,7 @@ const writeubication = (uid, numero,estado) => {
                 valor: numero,
                 key: newPostKey,
                 camera:'',
+                type,
                 estado,
                 currentPosition
             };

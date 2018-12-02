@@ -124,11 +124,15 @@ const see = (type, number, firts, half, last,uid) => {
       let serieInit = firts.toUpperCase();
       let serieEnd = last.toUpperCase();
       if (serieInit === 'A' && 64 < serieEnd < 91) {
-        const nSerie=true
+        const nSerie=true;
+        writeubication(uid, numero,type,nSerie)
       } else if (serieInit === 'B' && serieEnd === 'A' && valor <= 5000000) {
-        const nSerie=true
+        const nSerie=true;
+        writeubication(uid, numero,type,nSerie);
       } else {
-        const nSerie=false
+        const nSerie=false;
+        writeubication(uid, numero,type,nSerie);
+
       }
     } else if (type === 'B') {
       let valor = half;
@@ -136,15 +140,20 @@ const see = (type, number, firts, half, last,uid) => {
       let serieEnd = last.toUpperCase();
       if (serieInit === 'B' && 64 < serieEnd < 91) {
         const nSerie=true;
+        writeubication(uid, numero,type,nSerie);
       } else if (serieInit === 'C' && 65 <= serieEnd.charCodeAt() && serieEnd.charCodeAt() <= 67) {
         console.log(serieInit);
         const nSerie=true;
+        writeubication(uid, numero,type,nSerie);
         console.log(65 <= serieEnd.charCodeAt() <= 67)
       } else if (serieInit === 'C' && serieEnd === 'D' && valor <= 5000000) {
         console.log("c")
         const nSerie=true;
+        writeubication(uid, numero,type,nSerie);
       } else {
         const nSerie=false;
+        writeubication(uid, numero,type,nSerie);
+
       }
 
     } else if (type === 'C') {
@@ -153,15 +162,20 @@ const see = (type, number, firts, half, last,uid) => {
       let serieEnd = last.toUpperCase();
 
       if (serieInit === 'C' && serieEnd === 'D' && valor >= 5000001) {
-        const nSerie=true
+        const nSerie=true;
+        writeubication(uid, numero,type,nSerie);
       } else if (serieInit === 'C' && 68 < serieEnd.charCodeAt() && serieEnd.charCodeAt() < 91) {
-        const nSerie=true
+        const nSerie=true;
+        writeubication(uid, numero,type,nSerie);
       } else if (serieInit === 'D' && 65 === serieEnd.charCodeAt()) {
-        const nSerie=true
+        const nSerie=true;
+        writeubication(uid, numero,type,nSerie);
       } else if (serieInit === 'D' && serieEnd.charCodeAt() === 66 && valor <= 5000000) {
-        const nSerie=true
+        const nSerie=true;
+        writeubication(uid, numero,type,nSerie);
       } else {
-        const nSerie=false
+        const nSerie=false;
+        writeubication(uid, numero,type,nSerie);
       }
     }
   } else if (number === 100) {
