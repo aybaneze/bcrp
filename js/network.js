@@ -13,4 +13,5 @@ const writeUserData = (userId, name, nickName, email, imageUrl) => {
   return userData;
 }
 
+
 window.writeUserData = writeUserData;

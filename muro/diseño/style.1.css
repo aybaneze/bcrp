@@ -33,7 +33,12 @@
     color: white;
 
 }
-
+#firstLetter{
+    width: 70px;
+}
+#lastLetter{
+    width: 70px;
+}
 .fondo {
     background: white;
     background-size: cover;
@@ -41,6 +46,30 @@
     height: 100px;
     width: 100%;
     color: rgb(13, 148, 18);
+}
+.fondo img{
+    height: 100px;
+    width: 200px;
+}
+
+h3 i {
+
+    width: 74%;
+    padding: 3px;
+    cursor: pointer;
+    border: solid 2px rgb(13, 148, 18);
+    background: rgb(13, 148, 18);
+    color: white;
+}
+
+h3 i:hover {
+    width: 74%;
+    padding: 3px;
+    cursor: pointer;
+    border: solid 2px rgb(13, 148, 18);
+    background: white;
+    color: rgb(13, 148, 18);
+
 }
 
 #map {
@@ -50,6 +79,20 @@
 
 h1 {
     text-align: center;
+}
+
+#btnIni {
+    cursor: pointer;
+}
+
+#btnLbf {
+    cursor: pointer;
+
+}
+
+#btnUb {
+    cursor: pointer;
+
 }
 
 .check {
@@ -73,7 +116,8 @@ h1 {
     padding: 3px;
     cursor: pointer;
     width: 10rem;
-    border: solid 2px rgb(13, 148, 18);;
+    border: solid 2px rgb(13, 148, 18);
+    ;
     background: white;
     color: black;
 }
@@ -116,6 +160,16 @@ h1 {
 .filter {
     width: 100%;
 }
+.cuadro{
+    width: 100%;
+    overflow: auto;
+}
+#evaluate{
+    color: rgb(13, 148, 18);
+}
+#evaluateimg{
+    color: rgb(13, 148, 18);
+}
 
 @media(max-width:574px) {
     .hidden2 {
@@ -142,6 +196,12 @@ h1 {
         width: 90%;
 
     }
+    .cuadro{
+        width: 320px;
+        height: 200px;
+        overflow: hidden;
+    }
+
 }
 
 @media(max-width:767px) {

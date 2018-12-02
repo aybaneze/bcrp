@@ -29,3 +29,6 @@ const btnVer=document.getElementsByClassName('btnVer');
 const firstLetter= document.getElementById('firstLetter');
 const halfLetter= document.getElementById('halfLetter');
 const lastLetter= document.getElementById('lastLetter');
+const seeconti = document.getElementById('conti');
+const seeomi = document.getElementById('omi');
+const clickOmi= document.getElementById('evaluate');
