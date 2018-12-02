@@ -1,31 +1,79 @@
-const getLocations = () => {
-    fetch('https://www.datos.gov.co/resource/g373-n3yy.json')
-        .then(response => response.json())
-        .then(locations => {
-            let locationsInfo = []
-            console.log(locations);
-
-            locations.forEach(location => {
-
+const array = (uid,array) => {
+    firebase.database().ref(`/user-ubication/${uid}`).on('value', snap => {
+        Object.keys(snap.val()).forEach(element => {
+            firebase.database().ref(`/user-ubication/${uid}/${element}`).on('value', snap => {
                 let locationData = {
                     position: {
-                        lat: location.punto.coordinates[1],
-                        lng: location.punto.coordinates[0]
+                        lat: snap.val().currentPosition.lat,
+                        lng: snap.val().currentPosition.lng
                     },
-                    name: location.nombre_sede
+                    name: snap.val().estado
                 }
+                array.push(locationData)
+            });
+        });
+
+
+
+
+    })
+}
+const getLocations = (uid, ) => {
+    let locationsInfo = []
+    firebase.database().ref(`/user-ubication/${uid}`).on('value', snap => {
+        Object.keys(snap.val()).forEach(element => {
+            firebase.database().ref(`/user-ubication/${uid}/${element}`).on('value', snap => {
+                let locationData = {
+                    position: {
+                        lat: snap.val().currentPosition.lat,
+                        lng: snap.val().currentPosition.lng
+                    },
+                    name: snap.val().estado
+                }
+                console.log(locationData);
                 locationsInfo.push(locationData)
-            })
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition((data) => {
-                    let currentPosition = {
-                        lat: data.coords.latitude,
-                        lng: data.coords.longitude
-                    }
-                    dibujarMapa(currentPosition, locationsInfo)
-                })
-            }
-        })
+                console.log(locationsInfo);
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition((data) => {
+                        let currentPosition = {
+                            lat: data.coords.latitude,
+                            lng: data.coords.longitude
+                        }
+                        console.log(locationsInfo);
+
+                        dibujarMapa(currentPosition, locationsInfo)
+                    })
+                }
+
+            });
+        });
+
+
+
+
+    })
+    //     let locationsInfo = []
+
+    //     let locationData = {
+    //         position: {
+    //             lat: snap.val().currentPosition.lat,
+    //             lng: snap.val().currentPosition.lng
+    //         },
+    //         name: snap.val().estado
+    //     }
+    //     locationsInfo.push(locationData)
+    //     if (navigator.geolocation) {
+    //         navigator.geolocation.getCurrentPosition((data) => {
+    //             let currentPosition = {
+    //                 lat: data.coords.latitude,
+    //                 lng: data.coords.longitude
+    //             }
+    //             console.log(locationsInfo);
+
+    //             dibujarMapa(currentPosition, locationsInfo)
+    //         })
+    //     }
+    // })
 }
 
 const dibujarMapa = (obj, locationsInfo) => {
@@ -51,4 +99,3 @@ const dibujarMapa = (obj, locationsInfo) => {
 
     })
 }
-window.addEventListener('load', getLocations)

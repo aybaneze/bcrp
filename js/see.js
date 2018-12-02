@@ -12,7 +12,7 @@ btnIni.addEventListener('click', () => {
     seeDanger.setAttribute('class', 'hidden');
     camera.setAttribute('class', 'hidden');
     seeomi.removeAttribute('class');
-    seecontise.tAttribute('class', 'hidden');
+    seeconti.setAttribute('class', 'hidden');
     seeomi.setAttribute('class', 'col-md-12 pt-1 text-center');
 })
 btnLbf.addEventListener('click', () => {
@@ -21,7 +21,7 @@ btnLbf.addEventListener('click', () => {
     seeNserie.setAttribute('class', 'hidden');
     camera.setAttribute('class', 'hidden');
     seeomi.removeAttribute('class');
-    seecontise.tAttribute('class', 'hidden');
+    seeconti.setAttribute('class', 'hidden');
     seeomi.setAttribute('class', 'col-md-12 pt-1 text-center');
 })
 btnUb.addEventListener('click', () => {
@@ -30,7 +30,7 @@ btnUb.addEventListener('click', () => {
     seeDanger.setAttribute('class', 'hidden');
     camera.setAttribute('class', 'hidden');
     seeomi.removeAttribute('class');
-    seecontise.tAttribute('class', 'hidden');
+    seeconti.setAttribute('class', 'hidden');
     seeomi.setAttribute('class', 'col-md-12 pt-1 text-center');
 })
 dispaymoney.addEventListener('click', () => {

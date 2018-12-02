@@ -1,0 +1,18 @@
+{
+  "name": "karwaSinchiapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base64-img": "^1.0.4",
+    "body-parser": "^1.18.3",
+    "cfenv": "1.0.x",
+    "express": "4.15.x",
+    "gh-pages": "^2.0.1",
+    "watson-developer-cloud": "^3.12.0"
+  }
+}

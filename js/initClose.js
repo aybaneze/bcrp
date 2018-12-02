@@ -6,7 +6,8 @@ window.onload = () => {
             if (user.emailVerified === true) {
                 console.log('Inicio Logueado ')
                 moneyValue( user.uid);
-               
+                omitir(user.uid);
+                getLocations(user.uid);
             }
             if (user.isAnonymous === true) {
                 console.log('Inicio Logueado ANONIMO ')

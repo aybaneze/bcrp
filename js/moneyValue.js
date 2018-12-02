@@ -11,11 +11,11 @@ const moneyValue = (uid) => {
       const longString = (btnCheck[index].value).length;
       const string = (btnCheck[index].value).slice(2, longString);
       const number = parseInt(string);
-      asigValue(number,uid);
+      asigValue(number, uid);
     })
   }
 }
-const asigValue = (number,uid) => {
+const asigValue = (number, uid) => {
   let money = '';
   if (number === 10) {
     typeMoney.setAttribute('class', 'hidden');
@@ -36,7 +36,7 @@ const asigValue = (number,uid) => {
             value: number,
             type: 'A'
           }
-          searchMoneyValue(money, number,uid);
+          searchMoneyValue(money, number, uid);
         } else if (typeMoney === 'secondImage') {
           console.log(12);
 
@@ -44,14 +44,14 @@ const asigValue = (number,uid) => {
             value: number,
             type: 'B'
           }
-          searchMoneyValue(money, number,uid);
+          searchMoneyValue(money, number, uid);
         } else if (typeMoney === 'thirdImage') {
           console.log(13);
           money = {
             value: number,
             type: 'C'
           }
-          searchMoneyValue(money, number,uid);
+          searchMoneyValue(money, number, uid);
         }
       })
     }
@@ -70,7 +70,7 @@ const asigValue = (number,uid) => {
   }
 }
 
-const searchMoneyValue = (money, number,uid) => {
+const searchMoneyValue = (money, number, uid) => {
 
   inputTye.removeAttribute('class');
   inputTye.setAttribute('class', 'col-md-12 text-center mt-2');
@@ -80,17 +80,17 @@ const searchMoneyValue = (money, number,uid) => {
       const firts = firstLetter.value;
       const half = halfLetter.value;
       const last = lastLetter.value;
-      const typeLetter = btnVer[index].id; 
+      const typeLetter = btnVer[index].id;
 
       if (typeLetter === 'A') {
         console.log('1');
-        exerciseType(typeLetter, number, firts, half, last,uid);
+        exerciseType(typeLetter, number, firts, half, last, uid);
       } else if (typeLetter === 'B') {
         console.log('2');
-        exerciseType(typeLetter, number, firts, half, last,uid);
+        exerciseType(typeLetter, number, firts, half, last, uid);
       } else if (typeLetter === 'C') {
         console.log('3');
-        exerciseType(typeLetter, number, firts, half, last,uid);
+        exerciseType(typeLetter, number, firts, half, last, uid);
       }
 
     })
@@ -98,12 +98,12 @@ const searchMoneyValue = (money, number,uid) => {
 
 
 }
-const exerciseType = (type, number, firts, half, last,uid) => {
+const exerciseType = (type, number, firts, half, last, uid) => {
 
   if (firts !== '' & half !== '' & last !== '') {
     if (firts.length === 1 & half.length === 7 & last.length === 1) {
       if (typeof (firts) === 'string' & typeof (parseInt(half)) !== 'string' & typeof (last) === 'string') {
-        see(type, number, firts, half, last,uid);
+        see(type, number, firts, half, last, uid);
       } else {
         alert('Completa el recuadro con la cantidad de digitos correspondiente');
       }
@@ -115,23 +115,24 @@ const exerciseType = (type, number, firts, half, last,uid) => {
   }
 
 }
-const see = (type, number, firts, half, last,uid) => {
-  camera.removeAttribute('class','hidden');
-  seeNserie.setAttribute('class','hidden');
+const see = (type, number, firts, half, last, uid) => {
+  camera.removeAttribute('class', 'hidden');
+  seeNserie.setAttribute('class', 'hidden');
   if (number === 20) {
     if (type === 'A') {
       let valor = half;
       let serieInit = firts.toUpperCase();
       let serieEnd = last.toUpperCase();
       if (serieInit === 'A' && 64 < serieEnd < 91) {
-        const nSerie=true;
-        writeubication(uid, numero,type,nSerie)
+        const nSerie = true;
+
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'B' && serieEnd === 'A' && valor <= 5000000) {
-        const nSerie=true;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = true;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else {
-        const nSerie=false;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = false;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
 
       }
     } else if (type === 'B') {
@@ -139,20 +140,20 @@ const see = (type, number, firts, half, last,uid) => {
       let serieInit = firts.toUpperCase();
       let serieEnd = last.toUpperCase();
       if (serieInit === 'B' && 64 < serieEnd < 91) {
-        const nSerie=true;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = true;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'C' && 65 <= serieEnd.charCodeAt() && serieEnd.charCodeAt() <= 67) {
         console.log(serieInit);
-        const nSerie=true;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = true;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
         console.log(65 <= serieEnd.charCodeAt() <= 67)
       } else if (serieInit === 'C' && serieEnd === 'D' && valor <= 5000000) {
         console.log("c")
-        const nSerie=true;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = true;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else {
-        const nSerie=false;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = false;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
 
       }
 
@@ -162,20 +163,20 @@ const see = (type, number, firts, half, last,uid) => {
       let serieEnd = last.toUpperCase();
 
       if (serieInit === 'C' && serieEnd === 'D' && valor >= 5000001) {
-        const nSerie=true;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = true;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'C' && 68 < serieEnd.charCodeAt() && serieEnd.charCodeAt() < 91) {
-        const nSerie=true;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = true;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'D' && 65 === serieEnd.charCodeAt()) {
-        const nSerie=true;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = true;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else if (serieInit === 'D' && serieEnd.charCodeAt() === 66 && valor <= 5000000) {
-        const nSerie=true;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = true;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       } else {
-        const nSerie=false;
-        writeubication(uid, numero,type,nSerie);
+        const nSerie = false;
+        writeubication(uid, number, type, nSerie, serieInit + ' ' + valor + ' ' + serieEnd);
       }
     }
   } else if (number === 100) {

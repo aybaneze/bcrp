@@ -140,7 +140,7 @@
       </div>
     </div>
   </section>
-  <section id="camera" class="hidden">
+  <section id="camera" class="">
     <div class="slider container-fluid  ">
       <div class="container ">
         <div class="row  text-center bg-white">
@@ -179,28 +179,8 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body text-center">
-            <div class="row">
-              <div class="col-md-12">
-                <div id="cool-img" class="hidden">
-                  <i class="display-2 fas fa-circle text-center"></i>
-                  <p>VERDADERO</p>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div id="so-so-img" class="hidden">
-                  <i class="display-2 fas fa-circle text-warning"></i>
-                  <p>PROBABLEMENTE</p>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div id="bad-img" class="hidden">
-                  <i class="display-2 fas fa-circle text-danger"></i>
-                  <p>POSIBLEMENTE SEA FALSO</p>
-                  <p>Alerta</p>
-                </div>
-              </div>
-            </div>
+          <div id="rest" class="modal-body text-center">
+            
           </div>
           <div class="modal-footer text-center">
             <i class="fas fa-circle text-success"></i>
@@ -233,7 +213,8 @@
     </div>
     </div>
   </section>
-
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHtRdetPcAlH91ENkXW01ev43JYHjiAY">
+  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -244,6 +225,7 @@
   <script src="./js/camera.js"></script>
   <script src="./js/see.js"></script>
   <script src="./js/app.js"></script>
+  <script src="./js/omiResult.js"></script>
   <script src="./js/initClose.js"></script>
   <script src="./js/map.js"></script>
   <script src="./js/writedata.js"></script>
@@ -261,8 +243,6 @@
       messagingSenderId: "754862020195"
     };
     firebase.initializeApp(config);
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlaztrxAnFM8iv9g1FND0P-mSzsk_YT-I">
   </script>
 </body>
 
