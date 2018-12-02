@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./diseño/style.css">
+
+    <title>KS/.</title>
+</head>
+
+<body>
+    <header class="color fixed-top ">
+        <div class="menu color  ">
+            <div class="row">
+                <div class="col-md-12  center ">
+                    <h3 class="pl-3 display-4">KS/.</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </header>
+    <section id="logindisplay">
+        <div class="container-fluid pt-5 slider d-flex justify-content-center align-items-center ">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <h3 class="pt-3 title text-white">Iniciar Sesión</h1>
+                    </div>
+                </div>
+                <div class="col-md-12 pt-3 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-md-12 pt-3">
+                                    <input id="email" type="text" class="p-1" id="email_login" placeholder="Correo">
+                                </div>
+                                <div class="col-md-12 pt-4">
+                                    <input id="password" type="password" class="p-1" id="passwordLogin" placeholder="Contraseña"
+                                        required>
+                                </div>
+                                <div class="col-md-12 pt-5 ">
+                                    <input id="SignIn" type="button" value="INGRESAR" id="login" class="p-1 btn color">
+                                </div>
+                                <div class="col-md-12 pt-4 text-center">
+                                    <div class="row">
+                                        <div class="col-6 col-md-6">
+                                            <i id="google-SignIn" class="fab fa-google iconGooogle"></i>
+                                            <p class="tamaño">Google</p>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <i id="anonimo" class="fas fa-user-secret iconIncognito"></i>
+                                            <p class="tamaño ">incognito</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 pt-1 text-center ">
+                                    <p class="title tamaño">¿Primera vez aquí?<span class="text" id="seeRegister">CREAR
+                                            CUENTA</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="registerdisplay" class="hidden">
+        <div class="container-fluid pt-5 slider d-flex justify-content-center align-items-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center ">
+                        <h3 class="pt-3 title  text-white">Crear Cuenta</h1>
+                    </div>
+                </div>
+                <div class="col-md-12 pt-3 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body ">
+                            <div class="row">
+                                <div class="col-md-12 pt-3">
+                                    <input id="nickName-register" type="email" class="p-1" placeholder="Nombre de usuario" >
+                                </div>
+                                <div class="col-md-12 pt-3">
+                                    <input id="name-register" type="text" class="p-1" placeholder="Nombre completo" >
+                                </div>
+                                <div class="col-md-12 pt-3">
+                                    <input id="email-register" type="email" class="p-1" placeholder="Correo" >
+                                </div>
+                                <div class="col-md-12 pt-3">
+                                    <input id="password-register" type="password" class="p-1" placeholder="Contraseña">
+                                </div>
+                                <div class="col-md-12 pt-4 ">
+                                    <input id="register-user" type="button" value="Registrarse" class="p-1 btn color">
+                                </div>
+                                <div class="col-md-12 pt-4 text-center ">
+                                    <p class="title tamaño">¿Ya tienes cuenta?<span class="text" id="seeLogin">INICIAR
+                                            SESIÓN</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./diseño/see.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCRXJE7MHVNkB29KFL3FQpp5EGD03xbP2s",
+    authDomain: "bcrphachaton.firebaseapp.com",
+    databaseURL: "https://bcrphachaton.firebaseio.com",
+    projectId: "bcrphachaton",
+    storageBucket: "bcrphachaton.appspot.com",
+    messagingSenderId: "754862020195"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="./js/app.js"></script>
+<script src="./js/network.js"></script>
+<script src="./js/fire-base.js"></script>
+
+</html>
