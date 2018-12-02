@@ -17,7 +17,7 @@ h4:hover{
     display: none;
 }
 .slider {
-    background: url(https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background: url('/imgSlider/mch.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -30,6 +30,7 @@ h4:hover{
 
 .card {
     width: 25rem;
+    background: #d3d1d2c0;
 }
 
 .navbar {
@@ -37,7 +38,7 @@ h4:hover{
 }
 
 .color {
-    background: rgb(13, 148, 18);
+    background: rgba(16, 102, 19, 0.589);
     color: white;
 }
 
@@ -61,7 +62,8 @@ input {
 
 .text {
     cursor: pointer;
-    color: rgb(13, 148, 18);
+    font-weight:300;
+    color: rgb(16, 102, 19);
     text-decoration: underline;
 }
 
@@ -85,15 +87,16 @@ h1 {
 }
 .iconGooogle {
     cursor: pointer;
+    color: #db3236;
     font-size: 22px;
     padding: 10px;
-    border-radius: 50%;
-    border: 1px solid black;
+    border-radius: 55%;
+    border: 3px solid #db3236;
 }
 .iconGooogle:hover {
     background: #db3236;
     color: white;
-    border: 1px solid #db3236;
+    border: 3px solid #db3236;
 
 }
 .iconIncognito{
@@ -104,12 +107,12 @@ h1 {
     padding-top: 9px;
     padding-bottom:10px; 
     border-radius: 50%;
-    border: 1px solid black; 
+    border: 3px solid black; 
 }
 .iconIncognito:hover {
     background: black;
     color: white;
-    border: 1px solid black;
+    border: 3px solid black;
 
 }
 

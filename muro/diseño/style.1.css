@@ -53,6 +53,7 @@ h1 {
 }
 
 .check {
+    cursor: pointer;
     width: 5rem;
     border: solid 2px rgb(13, 148, 18);
     ;
@@ -82,14 +83,17 @@ h1 {
 }
 
 .img{
-    border: solid 2px black;
+    cursor: pointer;
     width: 90%;
-    height: 50px;
+    height: 150px;
 }
 
 .ancho{
     width: 75%;
 
+}
+.filter{
+    width: 100%;
 }
 @media(max-width:574px) {
     .hidden2 {

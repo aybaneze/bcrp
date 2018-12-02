@@ -29,6 +29,8 @@ btnRegister.addEventListener("click", () => {
     .then((result) => {
       console.log("me registro");
       const user = result.user;
+      
+      writeUserData(user.uid, nameRegister.value, nickNameRegister.value, user.email, user.photoURL);
       checkEmail();
       register.setAttribute("class", "hidden");
       singIn.removeAttribute("class");

@@ -59,7 +59,7 @@
       </div>
     </div>
   </section>
-  <section id="seeN°serie" class="hidden">
+  <section id="seeN°serie" class="">
     <div class=" container-fluid  slider text-dark d-flex align-items-center justify-content-center ">
       <div class="row  pt-3">
         <div class="col-md-12 text-center ">
@@ -70,27 +70,29 @@
             <div class="col-md-12 mt-3">
               <div class="row">
                 <div class="col-md-4 col-6 ">
-                  <input type="button" class="check" value="S/.10">
+                  <input type="button" class="check" value="S/10">
                 </div>
                 <div class="col-md-4 col-6">
-                  <input type="button" class="check" value="s/.20">
+                  <input type="button" class="check" value="s/20">
                 </div>
                 <div class="col-md-4 col-6 mt-2">
-                  <input type="button" class="check" value="S/.50">
+                  <input type="button" class="check" value="S/50">
                 </div>
                 <div class="col-md-6 col-6 mt-2">
-                  <input type="button" class="check" value="S/.100">
+                  <input type="button" class="check" value="S/100">
                 </div>
                 <div class="col-md-6 col-12 mt-2">
-                  <input type="button" class="check" value="S/.200">
+                  <input type="button" class="check" value="S/200">
                 </div>
               </div>
             </div>
-            <div class="col-md-12 mt-3 d-flex align-items-center justify-content-center">
-              <div class="row ancho">
-                <div class="col-md-4 img"></div>
-                <div class="col-md-4 img"></div>
-                <div class="col-md-4 img"></div>
+            <div  class="col-md-12 mt-3 ">
+              <div id="typeMoney" class="hidden">
+                <div class="row ancho d-flex align-items-center justify-content-center">
+                  <div class="col-md-4"><img id="firsImage"  src="" class="img-fluid img" alt=""></div>
+                  <div class="col-md-4"><img id="secondImage" src="" class="img-fluid img" alt=""></div>
+                  <div class="col-md-4"><img id="thirdImage" src="" class="img-fluid img" alt=""></div>
+                </div>
               </div>
             </div>
           </div>
@@ -113,18 +115,23 @@
   </section>
   <section id="seeDanger">
     <div class=" container-fluid  slider text-dark d-flex align-items-center justify-content-center ">
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-
+      <div class="row d-flex ">
+        <div class="col-md-10 border border-dark justify-content-end ">
+          <input type="text" class="filter" placeholder="Username">
         </div>
-        <input type="text" class="" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-        <span class="input-group-text" id="basic-addon1">@</span>
+        <div class="col-md-2  border border-dark  justify-content-star ">
+          <input type="text" class="filter" placeholder="Username">
+        </div>
       </div>
+    </div>
     </div>
   </section>
 
 </body>
+<script src="./js/app.js"></script>
+<script src="./js/initClose.js"></script>
 <script src="./js/map.js"></script>
+<script src="./js/moneyValue.js"></script>
 <script src="./muro/diseño/seepost.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
 <script>
@@ -141,5 +148,3 @@
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlaztrxAnFM8iv9g1FND0P-mSzsk_YT-I">
 </script>
-<script src="./js/app.js"></script>
-<script src="./js/initClose.js"></script>

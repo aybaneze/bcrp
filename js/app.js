@@ -14,3 +14,11 @@ const btnRegister = document.getElementById("register-user");
 //botones de iniciar secion con google y anonimo
 const btnGoogle = document.getElementById("google-SignIn");
 const anonimus = document.getElementById("anonimo");
+//btn de valores de billetes
+const btnCheck = document.getElementsByClassName("check");
+const imgMoney = document.getElementsByClassName("img");
+
+const typeMoney= document.getElementById('typeMoney');
+const firsImage= document.getElementById('firsImage');
+const secondImage= document.getElementById('secondImage');
+const thirdImage= document.getElementById('thirdImage');
