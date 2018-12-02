@@ -14,11 +14,18 @@ const btnRegister = document.getElementById("register-user");
 //botones de iniciar secion con google y anonimo
 const btnGoogle = document.getElementById("google-SignIn");
 const anonimus = document.getElementById("anonimo");
-// ventana usuario
-const username=document.getElementById('username');
-// botones de post
-const post = document.getElementById('post');
-const postL = document.getElementById("post-list");
-const postP = document.getElementById("post-list-public");
-const postWord=document.getElementById("post-word");
-const btnSave =document.getElementById('publicar');
+//btn de valores de billetes
+const btnCheck = document.getElementsByClassName("check");
+const imgMoney = document.getElementsByClassName("img");
+const typeMoney= document.getElementById('typeMoney');
+const firsImage= document.getElementById('firsImage');
+const secondImage= document.getElementById('secondImage');
+const thirdImage= document.getElementById('thirdImage');
+//btn tipo A B C
+const typebtn= document.getElementById('typebtn');
+const inputTye= document.getElementById('inputTye');
+//input text tipo a b c
+const btnVer=document.getElementsByClassName('btnVer');
+const firstLetter= document.getElementById('firstLetter');
+const halfLetter= document.getElementById('halfLetter');
+const lastLetter= document.getElementById('lastLetter');
